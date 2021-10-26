@@ -30,6 +30,7 @@
 }
 
 #navbar__logo {
+ 
   background-color: #ff8177;
   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   background-size: 100%;
@@ -170,6 +171,7 @@
     top: 20%;
     right: 5%;
     transform: translate(5%, 20%);
+    background: #131313;
   }
 
   .navbar__toggle .bar {
