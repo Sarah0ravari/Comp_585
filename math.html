@@ -1,8 +1,108 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <title>Welcome to The Math Page</title>
+        <link rel="stylesheet" type="text/css" href="mathstyle.css">
+    </head>
+    <body>
+
+      <div class="topnav">
+        <a class="active" >Pathfinder</a>
+        <a href="index.html">Home</a>
+        <a href="physic.html">physic_page</a>
+        <a href="cal.html">calculator</a>        
+      </div>
+
+      <div class="title">
+        <h2>Mathematics</h2>
+      </div>
+
+      <div class="wrapper">
+        <div class="box a">
+          <button class="areaDropbtn" onclick="areaDropdownFunction()">Area</button>
+          <div class="dropdown-content" id="areaDropdown">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="box b">
+          <button class="volumeDropbtn" onclick="volumeDropdownFunction()">Volume</button>
+          <div class="dropdown-content" id="volumeDropdown">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="box c">
+          <button class="trigDropbtn" onclick="trigDropdownFunction()">Trigonomtry</button>
+          <div class="dropdown-content" id="trigDropdown">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="box d">
+          <button class="radiusDropbtn" onclick="radiusDropdownFunction()">Radius</button>
+          <div class="dropdown-content" id="radiusDropdown">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
 
 
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function areaDropdownFunction() {
+          document.getElementById("areaDropdown").classList.toggle("show");
+        }
 
-</body>
+        function volumeDropdownFunction() {
+          document.getElementById("volumeDropdown").classList.toggle("show");
+        }
+
+        function trigDropdownFunction() {
+          document.getElementById("trigDropdown").classList.toggle("show");
+        }
+
+        function radiusDropdownFunction() {
+          document.getElementById("radiusDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.areaDropbtn')) {
+          var myDropdown = document.getElementById("areaDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+
+          if (!e.target.matches('.volumeDropbtn')) {
+          var myDropdown = document.getElementById("volumeDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+
+          if (!e.target.matches('.trigDropbtn')) {
+          var myDropdown = document.getElementById("trigDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+
+          if (!e.target.matches('.radiusDropbtn')) {
+          var myDropdown = document.getElementById("radiusDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+        </script>
+
+    </body>
 </html>
