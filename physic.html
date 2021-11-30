@@ -1,98 +1,192 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Welcome to The Physics Page</title>
-        <link rel="stylesheet" type="text/css" href="mathstyle.css">
-    </head>
-    <body>
 
-      <div class="topnav">
+<head>
+    <title>Welcome to the Physics page</title>
+    <link rel="stylesheet" type="text/css" href="mathstyle.css">
+</head>
+
+<body>
+
+    <div class="topnav">
         <a class="active">Pathfinder</a>
         <a href="index.html">Home</a>
-        <a href="math.html">math_page</a>
-        <a href="cal.html">calculator</a>
-        
-      </div>
-      <div class="title">
+        <a href="math.html">Mathematics</a>
+        <a href="cal.html">Calculator</a>
+    </div>
+
+    <div class="title">
         <h2>Physics</h2>
-      </div>
+    </div>
 
+    <body>
+        <script>
+            function k1() {
+                var v_0 = document.getElementById('v_0').value;
+                var a = document.getElementById('a').value;
+                var t = document.getElementById('t').value;
+                document.getElementById('v_f').innerHTML = Number(v_0) + (a * t);
+            }
+            function k2() {
+                var x_02 = document.getElementById('x_02').value;
+                var v_02 = document.getElementById('v_02').value;
+                var a2 = document.getElementById('a2').value;
+                var t2 = document.getElementById('t2').value;
+                var half = 0.5
+                document.getElementById('x_f').innerHTML = Number(x_02) + (v_02 * t2) + (half * a2 * t2 * t2);
+            }
+            function k3() {
+                var x_03 = document.getElementById('x_03').value;
+                var v_03 = document.getElementById('v_03').value;
+                var a3 = document.getElementById('a3').value;
+                var x_f3 = document.getElementById('x_f3').value;
+                var left = v_03 * v_03;
+                var diff = (x_f3 - x_03);
+                var right = diff * 2 * a3;
+                document.getElementById('v_f3').innerHTML = Math.sqrt(left + right);
+            }
+            function hookesLaw() {
+                neg = -1;
+                var k = document.getElementById('springConstant').value;
+                var x = document.getElementById('displacement').value;
+                document.getElementById('springForce').innerHTML = (neg * k * x);
+            }
+            function force() {
+                var m1 = document.getElementById('m1').value;
+                var accel = document.getElementById('accel').value;
+                document.getElementById('force').innerHTML = m1 * accel;
+            }
+            function weight() {
+                var m2 = document.getElementById('m2').value;
+                var g1 = document.getElementById('g1').value;
+                document.getElementById('weight').innerHTML = m2 * g1;
+            }
+            function frictionForce() {
+                var mu = document.getElementById('mu').value;
+                var N = document.getElementById('Normal').value;
+                document.getElementById('frictionForce').innerHTML = mu * N;
+            }
+            function kenergy() {
+                var half2 = 0.5;
+                var m3 = document.getElementById('m3').value;
+                var v = document.getElementById('v').value;
+                document.getElementById('kenergy').innerHTML = (half2 * m3 * v * v);
+            }
+            function penergy() {
+                var m4 = document.getElementById('m4').value;
+                var g2 = document.getElementById('g2').value;
+                var h = document.getElementById('h').value;
+                document.getElementById('penergy').innerHTML = (m4 * g2 * h);
+            }
 
-      <!-- Load Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </script>
+        <b>Kinematic Equations</b><br><br>
 
-<!-- Buttons to choose list or grid view -->
-<button onclick="listView()"><i class="fa fa-bars"></i> List</button>
-<button onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+        <b>v<sub>f</sub> = v<sub>0</sub> + at</b><br>
+        Enter the value of <b>v<sub>0</sub></b>:
+        <input type="number" value="" id="v_0"><br><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a"><br><br>
+        Enter the value of <b>t</b>:
+        <input type="number" value="" id="t"><br><br>
+        <input type="submit" value="calculate" onclick="return k1()">
+        <b>v<sub>f</sub> = </b>
+        <b><span id="v_f"></span></b><br><br>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2><a href="solutionphysic.html">Kinematic Equations</a></h2>
-    
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2><a href="solutionphysic.html">Hook's Law</a></h2>
-    
-  </div>
-</div>
+        <b>x<sub>f</sub> = x<sub>0</sub> + v<sub>0</sub>t + (1/2)at<sup>2</sup></b><br>
+        Enter the value of <b>x<sub>0</sub></b>:
+        <input type="number" value="" id="x_02"><br><br>
+        Enter the value of <b>v<sub>0</sub></b>:
+        <input type="number" value="" id="v_02"><br><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a2"><br><br>
+        Enter the value of <b>t</b>:
+        <input type="number" value="" id="t2"><br><br>
+        <input type="submit" value="calculate" onclick="return k2()">
+        <b>x<sub>f</sub> = </b>
+        <b><span id="x_f"></span></b><br><br>
 
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2><a href="solutionphysic.html">Energy</a></h2>
-    
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2><a href="solutionphysic.html">Force</a></h2>
-    
-  </div>
-</div>
+        <b>v<sub>f</sub><sup>2</sup> = v<sub>0</sub><sup>2</sup> + 2a(x<sub>f</sub> - x<sub>0</sub>)</b><br>
+        Enter the value of <b>v<sub>0</sub></b>:
+        <input type="number" value="" id="v_03"><br><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a3"><br><br>
+        Enter the value of <b>x<sub>f</sub></b>:
+        <input type="number" value="" id="x_f3"><br><br>
+        Enter the value of <b>x<sub>0</sub></b>:
+        <input type="number" value="" id="x_03"><br><br>
+        <input type="submit" value="calculate" onclick="return k3()">
+        <b>v<sub>f</sub> = </b>
+        <b><span id="v_f3"></span></b><br><br>
 
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2><a href="solutionphysic.html">Power</a></h2>
-   
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2><a href="solutionphysic.html">Weight</a></h2>
-   
-  </div>
-</div>
+        <b>Force</b><br>
 
+        <b>F = ma</b><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m1"><br><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="accel"><br><br>
+        <input type="submit" value="calculate" onclick="return force()">
+        <b>F = </b>
+        <b><span id="force"></span></b><br><br>
 
-<div class="row">
-  <div class="column" style="background-color:#ccc;">
-    <h2><a href="solutionphysic.html">Work</a></h2>
-   
-  </div>
-  <div class="column" style="background-color:#ddd;">
-    <h2><a href="solutionphysic.html">Tension</a></h2>
-   
-  </div>
-</div>
+        <b>Weight</b><br>
 
-<script>
- 
-var elements = document.getElementsByClassName("column");
+        <b>W = mg, *note* g (gravity) is 9.8 m/s<sup>2</sup> when on Earth</b><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m2"><br><br>
+        Enter the value of <b>g</b>:
+        <input type="number" value="" id="g1"><br><br>
+        <input type="submit" value="calculate" onclick="return weight()">
+        <b>W = </b>
+        <b><span id="weight"></span></b><br><br>
 
+        <b>Hooke's Law</b><br>
 
-var i;
+        <b>F = -kx</b><br>
+        Enter the value of <b>k</b>:
+        <input type="number" value="" id="springConstant"><br><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="displacement"><br><br>
+        <input type="submit" value="calculate" onclick="return hookesLaw()">
+        <b>F = </b>
+        <b><span id="springForce"></span></b><br><br>
 
-// List View
-function listView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "100%";
-  }
-}
+        <b>Force of Friction</b><br>
 
-// Grid View
-function gridView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
-  }
-}
-</script>
+        <b>f = μN</b><br>
+        Enter the value of <b>μ</b>:
+        <input type="number" value="" id="mu"><br><br>
+        Enter the value of <b>N</b>:
+        <input type="number" value="" id="Normal"><br><br>
+        <input type="submit" value="calculate" onclick="return frictionForce()">
+        <b>f = </b>
+        <b><span id="frictionForce"></span></b><br><br>
 
-      
+        <b>Kinetic Energy</b><br>
+
+        <b>KE = (1/2)mv<sup>2</sup></b><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m3"><br><br>
+        Enter the value of <b>v</b>:
+        <input type="number" value="" id="v"><br><br>
+        <input type="submit" value="calculate" onclick="return kenergy()">
+        <b>KE = </b>
+        <b><span id="kenergy"></span></b><br><br>
+
+        <b>Potential Energy</b><br>
+
+        <b>PE = mgh, *note* g (gravity) is 9.8 m/s<sup>2</sup> when on Earth</b><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m4"><br><br>
+        Enter the value of <b>g</b>:
+        <input type="number" value="" id="g2"><br><br>
+        Enter the value of <b>h</b>:
+        <input type="number" value="" id="h"><br><br>
+        <input type="submit" value="calculate" onclick="return penergy()">
+        <b>PE = </b>
+        <b><span id="penergy"></span></b><br><br>
 
     </body>
-    </html>
+
+</html>

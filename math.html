@@ -9,108 +9,36 @@
       <div class="topnav">
         <a class="active" >Pathfinder</a>
         <a href="index.html">Home</a>
-        <a href="physic.html">physic_page</a>
-        <a href="cal.html">calculator</a>        
+        <a href="physic.html">Physics</a>
+        <a href="cal.html">Calculator</a>        
       </div>
 
       <div class="title">
         <h2>Mathematics</h2>
-      </div>
+        <div class="grid-container">
+          <div class="grid-item">Area</div>
+          <div class="grid-item"></div>
+          <div class="grid-item">Volume</div> 
+          <div class="grid-item">Functions and Equations</div>
+          <div class="grid-item"></div>
+           <div class="grid-item">Trigonometry and Geometry</div>
+             <div class="grid-item"></div>
+                 <div class="grid-item">Perimeter</div>  
+                 <div class="grid-item"></div>
+                 <div class="grid-item"></div>
+                 <div class="grid-item"></div>
+                 <div class="grid-item"></div>
 
-      <div class="wrapper">
-        <div class="box a">
-          <button class="areaDropbtn" onclick="areaDropdownFunction()">Area</button>
-          <div class="dropdown-content" id="areaDropdown">
-            <a href="solutionmath.html">Square</a>
-            <a href="solutionmath.html">Rectangle</a>
-            <a href="solutionmath.html">Cirecle</a>
-            <a href="solutionmath.html">Cone</a>
-            <a href="solutionmath.html">Sphere</a>
-            <a href="solutionmath.html">Triangle</a>
-            <a href="solutionmath.html">Rhombus</a>
-            <a href="solutionmath.html">Trapezoid</a>
+                 
+                 
+          
+        </div>
+        <div>
+          
+          <img src="img4.jpeg" alt="math" style="width:600px;height:300px;"> 
+          
           </div>
         </div>
-        <div class="box b">
-          <button class="volumeDropbtn" onclick="volumeDropdownFunction()">Volume</button>
-          <div class="dropdown-content" id="volumeDropdown">
-            <a href="solutionmath.html">Cube</a>
-            <a href="solutionmath.html">Parallelepiped</a>
-            <a href="solutionmath.html">Regular prism</a>
-            <a href="solutionmath.html">Regular prism</a>
-            <a href="solutionmath.html">Cylinder</a>
-            <a href="solutionmath.html">Sphere</a>
-          </div>
-        </div>
-        <div class="box c">
-          <button class="trigDropbtn" onclick="trigDropdownFunction()">Trigonomtry</button>
-          <div class="dropdown-content" id="trigDropdown">
-            <a href="solutionmath.html">Exact Values</a>
-            <a href="solutionmath.html">Angle</a>
-            <a href="solutionmath.html">Difference Formulas</a>
-            <a href="solutionmath.html">Sum Formulas</a>
-          </div>
-        </div>
-        <div class="box d">
-          <button class="radiusDropbtn" onclick="radiusDropdownFunction()">Radius</button>
-          <div class="dropdown-content" id="radiusDropdown">
-            <a href="solutionmath.html">Link 1</a>
-            <a href="solutionmath.html">Link 2</a>
-            <a href="solutionmath.html">Link 3</a>
-          </div>
-        </div>
-      </div>
-
-
-      <script>
-       
-        function areaDropdownFunction() {
-          document.getElementById("areaDropdown").classList.toggle("show");
-        }
-
-        function volumeDropdownFunction() {
-          document.getElementById("volumeDropdown").classList.toggle("show");
-        }
-
-        function trigDropdownFunction() {
-          document.getElementById("trigDropdown").classList.toggle("show");
-        }
-
-        function radiusDropdownFunction() {
-          document.getElementById("radiusDropdown").classList.toggle("show");
-        }
-        
-        
-        window.onclick = function(e) {
-          if (!e.target.matches('.areaDropbtn')) {
-          var myDropdown = document.getElementById("areaDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-
-          if (!e.target.matches('.volumeDropbtn')) {
-          var myDropdown = document.getElementById("volumeDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-
-          if (!e.target.matches('.trigDropbtn')) {
-          var myDropdown = document.getElementById("trigDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-
-          if (!e.target.matches('.radiusDropbtn')) {
-          var myDropdown = document.getElementById("radiusDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-        }
-        </script>
 
     </body>
 </html>
