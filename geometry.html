@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Welcome to The Math's solution Page</title>
+        <link rel="stylesheet" type="text/css" href="math.css">
+    </head>
+    <style>
+        .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #333;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: pink;
+  border: 1px blue;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+    </style>
+    
+
+      <div class="topnav">
+        <a class="active" >Pathfinder</a>
+        <a href="index.html">Home</a>
+        <a href="physic.html">Physics</a>
+        <a href="math.html">Mathematics</a>
+        <a href="cal.html">Calculator</a>        
+      </div>
+
+      <div class="title">
+        <h2>Trigonometry and Geometry</h2>
+      </div>
+
+<body>
+    
+<script>
+    function myfun()
+           {
+               var x1=document.getElementById('number1').value;
+               var y1=document.getElementById('number2').value;
+               var x2=document.getElementById('number3').value;
+               var y2=document.getElementById('number4').value;
+               let g=Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+               document.getElementById('result0').innerHTML=(g);
+           }
+    function myfun1(){
+               var x3=parseInt(document.getElementById('number5').value);
+               var y3=parseInt(document.getElementById('number6').value);
+               var x4=parseInt(document.getElementById('number7').value);
+               var y4=parseInt(document.getElementById('number8').value);
+               document.getElementById('result1').innerHTML=((x3+x4)/2);
+               document.getElementById('result2').innerHTML=((y3+y4)/2);
+    }
+    function myfun2(){
+        var c=parseInt(document.getElementById('number9').value);
+        var c1=parseInt(document.getElementById('number10').value);
+        document.getElementById('result3').innerHTML=(c*c+c1*c1);
+    }
+    function myfun3(){
+        var p=parseInt(document.getElementById('number11').value);
+        document.getElementById('result4').innerHTML=((p-2)*180);
+    }
+    function myfun4()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=Math.sin(d);
+               document.getElementById('result').innerHTML=(s);
+           }
+   function myfun5()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=Math.cos(d);
+               document.getElementById('result').innerHTML=(s);
+           }
+           function myfun6()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=Math.tan(d);
+               document.getElementById('result').innerHTML=(s);
+           }
+           function myfun7()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=1/(Math.cos(d));
+               document.getElementById('result').innerHTML=(s);
+           }
+           function myfun8()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=1/(Math.sin(d));
+               document.getElementById('result').innerHTML=(s);
+           }
+           function myfun9()
+           {
+               var T1=document.getElementById('number0').value;
+               d=T1*(Math.PI/180);
+               s=1/(Math.tan(d));
+               document.getElementById('result').innerHTML=(s);
+           }        
+    
+      </script>
+      <div class="grid-item">
+      <b>Calculating the value of angles in trigonometry</b><br><br>
+      Enter the angle:
+     <input type="number" value="" id="number0"><br><br>
+     <input type="submit" value="SIN" onclick="return myfun4()">
+     <input type="submit" value="COS" onclick="return myfun5()">
+     <input type="submit" value="TAN" onclick="return myfun6()">
+     <input type="submit" value="SEC" onclick="return myfun7()">
+     <input type="submit" value="COSEC" onclick="return myfun8()">
+     <input type="submit" value="COT" onclick="return myfun9()"><br><br>
+         <b>the result is:</b>
+         <b><span id="result"></span></b><br><br><br>
+      </div>
+
+      <div class="grid-item">
+      
+        <b>Calculating distance between two points</b><br><br>
+        <p></p>
+          Enter the x1:
+         <input type="number" value="" id="number1">  
+          Enter the y1:
+         <input type="number" value="" id="number2"><br><br>
+         Enter the x2:
+         <input type="number" value="" id="number3">  
+          Enter the y2:
+         <input type="number" value="" id="number4"><br><br>
+         <input type="submit" value="calculate" id="jai" onclick="return myfun()">
+         <b>the result is:</b>
+         <b><span id="result0"></span></b><br><br><br>
+      </div>
+
+      <div class="grid-item">
+
+         <b>Calculating midpoint between two points</b><br><br>
+         Enter the x1:
+        <input type="number" value="" id="number5">  
+         Enter the y1:
+        <input type="number" value="" id="number6"><br><br>
+        Enter the x2:
+        <input type="number" value="" id="number7">  
+         Enter the y2:
+        <input type="number" value="" id="number8"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return myfun1()">
+        <b>the result is:</b>
+        <b><span id="result1"></span></b><b>,<span id="result2"></span></b><br><br><br>
+
+      </div>
+
+      <div class="grid-item">
+
+
+        <b>Finding length of the hypotenuse of right angle</b><br><br>
+         Enter the side1:
+        <input type="number" value="" id="number9">  
+         Enter the side2:
+        <input type="number" value="" id="number10"><br><br>
+        <input type="submit" value="calculate"  id="jai"  onclick="return myfun2()">
+        <b>the result is:</b>
+        <b><span id="result3"></span></b><br><br><br>
+
+      </div>
+
+      <div class="grid-item">
+
+
+        <b>Sum of the sides of interior angles of a polygon</b><br><br>
+         Enter the number of sides of polygon:
+        <input type="number" value="" id="number11"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return myfun3()">
+        <b>the result is:</b>
+        <b><span id="result4"></span></b>
+
+      </div>
+
+      
+        
+     
+
+</body>
+</html>

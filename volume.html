@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to The Math's solution Page</title>
+        <link rel="stylesheet" type="text/css" href="math.css">
+    </head>
+    <style>
+        .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #333;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: pink;
+  border: 1px blue;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+    </style>
+    <body>
+
+      <div class="topnav">
+        <a class="active" >Pathfinder</a>
+        <a href="index.html">Home</a>
+        <a href="physic.html">Physics</a>
+        <a href="math.html">Mathematics</a>
+        <a href="cal.html">Calculator</a>        
+      </div>
+
+      <div class="title">
+        <h2>Volume</h2>
+      </div>
+
+<body>
+<script>
+    function myfun()
+            {
+                pi=3.14;
+                var a=document.getElementById('number1').value;
+                var h=document.getElementById('number2').value;
+                document.getElementById('result').innerHTML=(pi*a*a*h)/3;
+            }
+    function myfun1()
+            {
+                var b=document.getElementById('number3').value;
+                document.getElementById('result1').innerHTML=b*b*b;
+            }
+    function myfun2()
+            {
+                var d=document.getElementById('number4').value;
+                var e=document.getElementById('number5').value;
+                var c=document.getElementById('number6').value;
+                document.getElementById('result2').innerHTML=d*e*c;
+            }
+    function myfun3()
+            {
+                pi=3.14;
+                var f=document.getElementById('number7').value;
+                var i=document.getElementById('number8').value;
+                document.getElementById('result3').innerHTML=(pi*f*f*i);
+            }
+    function myfun4()
+            {
+                var j=document.getElementById('number9').value;
+                var k=document.getElementById('number10').value;
+                document.getElementById('result4').innerHTML=(j*k);
+            }
+    function myfun5()
+            {
+                pi=3.14;
+                var l=document.getElementById('number11').value;
+                document.getElementById('result5').innerHTML=(4*pi*l*l*l)/3;
+            }
+</script>
+<div class="grid-item">
+          <b>Volume of a Cone</b><br><br>
+         Enter the radius:
+         <input type="number" value="" id="number1"><br><br>
+         Enter the height:
+         <input type="number" value="" id="number2"><br><br>
+         <input type="submit" value="calculate" id="jai" onclick="return myfun()">
+         <b>the result is:</b>
+         <b><span id="result"></span></b><br><br>
+</div>
+
+<div class="grid-item">
+         <b>Volume of a Cube</b><br><br>
+          Enter the side:
+          <input type="number" value="" id="number3"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun1()">
+          <b>the result is:</b>
+          <b><span id="result1"></span></b><br><br>
+</div>  
+
+<div class="grid-item">
+          <b>Volume of a Cuboid</b><br><br>
+          Enter the length:
+          <input type="number" value="" id="number4"><br><br>
+          Enter the width:
+          <input type="number" value="" id="number5"><br><br>
+          Enter the height:
+          <input type="number" value="" id="number6"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun2()">
+          <b>the result is:</b>
+</div>
+<div class="grid-item">
+          <b><span id="result2"></span></b><br><br>
+          <b>Volume of a Cylinder</b><br><br>
+          Enter the radius:
+          <input type="number" value="" id="number7"><br><br>
+          Enter the height:
+          <input type="number" value="" id="number8"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun3()">
+          <b>the result is:</b>
+</div>
+
+<div class="grid-item">
+          <b><span id="result3"></span></b><br><br>
+          <b>Volume of a Prism</b><br><br>
+          Enter the base:
+          <input type="number" value="" id="number9"><br><br>
+          Enter the height:
+          <input type="number" value="" id="number10"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun4()">
+          <b>the result is:</b>
+</div>
+
+<div class="grid-item">
+         <b><span id="result4"></span></b><br><br>
+         <b>Volume of a Sphere</b><br><br>
+         Enter the radius:
+          <input type="number" value="" id="number11"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun5()">
+          <b>the result is:</b>
+          <b><span id="result5"></span></b>
+</div>
+
+
+
+</body>
+</html>

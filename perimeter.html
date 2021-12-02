@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to The Math's solution Page</title>
+        <link rel="stylesheet" type="text/css" href="math.css">
+    </head>
+    <style>
+      .grid-container {
+display: grid;
+grid-template-columns: auto auto auto;
+background-color: #333;
+padding: 10px;
+}
+
+.grid-item {
+background-color: pink;
+border: 1px blue;
+padding: 20px;
+font-size: 30px;
+text-align: center;
+text-decoration: none;
+}
+  </style>
+    
+
+      <div class="topnav">
+        <a class="active" >Pathfinder</a>
+        <a href="index.html">Home</a>
+        <a href="physic.html">Physics</a>
+        <a href="math.html">Mathematics</a>
+        <a href="cal.html">Calculator</a>       
+      </div>
+
+      <div class="title">
+        <h2>Perimeter</h2>
+      </div>
+
+<body>
+<script>
+    function myfun()
+            {
+                pi=3.14;
+                var a=document.getElementById('number').value;               
+                document.getElementById('result').innerHTML=(2*pi*a);
+            }
+    function myfun1()
+            {
+                var c=parseInt(document.getElementById('number1').value);   
+                var b=parseInt(document.getElementById('number2').value);              
+                document.getElementById('result1').innerHTML=2*(c+b);
+            }
+    function myfun2()
+            {
+                var d=document.getElementById('number3').value;               
+                document.getElementById('result2').innerHTML=(4*d);
+            }
+    function myfun3()
+            {
+                var e=parseInt(document.getElementById('number4').value);  
+                var f=parseInt(document.getElementById('number5').value);  
+                var g=parseInt(document.getElementById('number6').value);          
+                document.getElementById('result3').innerHTML= (e + f + g);
+            }
+
+  
+</script>
+
+<div class="grid-item">
+         <b>circumference of circle</b><br><br>
+         Enter the radius:
+         <input type="number" value="" id="number"><br><br>
+         <input type="submit" value="calculate" id="jai" onclick="return myfun()">
+         <b>the result is:</b>
+        <b><span id="result"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+        <b>Perimeter of rectangle</b><br><br>
+        Enter the length:
+          <input type="number" value="" id="number1"><br><br>
+          Enter the breadth:
+          <input type="number" value="" id="number2"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun1()">
+          <b>the result is:</b>
+         <b><span id="result1"></span></b><br><br>
+</div>
+
+<div class="grid-item">
+         <b>Perimeter of square</b><br><br>
+         Enter the side:
+          <input type="number" value="" id="number3"><br><br>
+          <input type="submit" value="calculate" id="jai" onclick="return myfun2()">
+          <b>the result is:</b>
+         <b><span id="result2"></span></b><br><br>
+</div>
+<div class="grid-item">
+         <b>Perimeter of triangle</b><br><br>
+         Enter the side1:
+         <input type="number" value="" id="number4"><br><br>
+         Enter the side2:
+         <input type="number" value="" id="number5"><br><br>
+         Enter the side3:
+         <input type="number" value="" id="number6"><br><br>
+         <input type="submit" value="calculate" id="jai" onclick="return myfun3()">
+         <b>the result is:</b>
+        <b><span id="result3"></span></b><br><br>
+</div>
+
+
+
+
+
+</body>
+</html>

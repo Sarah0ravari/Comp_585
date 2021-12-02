@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Welcome to the Math Page</title>
+    <link rel="stylesheet" type="text/css" href="math.css">
+</head>
+<style>
+    .grid-container {
+display: grid;
+grid-template-columns: auto auto auto;
+background-color: #333;
+padding: 10px;
+}
+
+.grid-item {
+background-color: pink;
+border: 1px blue;
+padding: 20px;
+font-size: 30px;
+text-align: center;
+text-decoration: none;
+}
+</style>
+
+<body>
+
+    <div class="topnav">
+        <a class="active">Pathfinder</a>
+        <a href="index.html">Home</a>
+        <a href="physic.html">Physics</a>
+        <a href="math.html">Mathematics</a>
+        <a href="cal.html">Calculator</a>
+    </div>
+
+    <div class="title">
+        <h2>Functions and Equations</h2>
+    </div>
+
+    <body>
+
+        <script>
+            function quad() {
+                var a1 = document.getElementById('a1').value;
+                var b1 = document.getElementById('b1').value;
+                var c1 = document.getElementById('c1').value;
+                var left = Number(-b1);
+                var mid = (b1 * b1);
+                var right = 4 * a1 * c1;
+                var num1 = left + Math.sqrt(mid - right);
+                var num2 = left - Math.sqrt(mid - right);
+
+                document.getElementById('quadResult1').innerHTML = num1 / (2 * a1);
+                document.getElementById('quadResult2').innerHTML = num2 / (2 * a1);
+            }
+            function diff2Sq() {
+                var a2 = document.getElementById('a2').value;
+                var b2 = document.getElementById('b2').value;
+
+                document.getElementById('diffResult').innerHTML = (a2 * a2) - (b2 * b2);
+            }
+            function perfSqTri() {
+                var a3 = document.getElementById('a3').value;
+                var b3 = document.getElementById('b3').value;
+
+                document.getElementById('pstResult').innerHTML = (a3 * a3) + Number(2 * a3 * b3) + (b3 * b3);
+            }
+            function productExp() {
+                var x1 = document.getElementById('x1').value;
+                var m1 = document.getElementById('m1').value;
+                var n1 = document.getElementById('n1').value;
+                var expsum = Number(m1) + Number(n1);
+
+                document.getElementById('pExpResult1').innerHTML = Math.pow(x1, expsum);
+            }
+            function productExp2() {
+                var x2 = document.getElementById('x2').value;
+                var y1 = document.getElementById('y1').value;
+                var m2 = document.getElementById('m2').value;
+                var baseproduct = x2 * y1;
+
+                document.getElementById('pExpResult2').innerHTML = Math.pow(baseproduct, m2);
+            }
+            function quotientExp() {
+                var x3 = document.getElementById('x3').value;
+                var m3 = document.getElementById('m3').value;
+                var n2 = document.getElementById('n2').value;
+                var expsub = m3 - n2;
+
+                document.getElementById('qExpResult1').innerHTML = Math.pow(x3, expsub);
+            }
+            function quotientExp2() {
+                var x4 = document.getElementById('x4').value;
+                var y2 = document.getElementById('y2').value;
+                var m4 = document.getElementById('m4').value;
+                var basequotient = x4 / y2;
+
+                document.getElementById('qExpResult2').innerHTML = Math.pow(basequotient, m4);
+            }
+            function fracExp() {
+                var x5 = document.getElementById('x5').value;
+                var p1 = document.getElementById('p1').value;
+                var q1 = document.getElementById('q1').value;
+                var base = Math.pow(x5, p1);
+                var inverse = 1 / q1;
+
+                document.getElementById('fExpResult').innerHTML = Math.pow(base, inverse);
+            }
+            function multRad() {
+                var x6 = document.getElementById('x6').value;
+                var y3 = document.getElementById('y3').value;
+                var n3 = document.getElementById('n3').value;
+                var inverse2 = 1 / n3;
+
+                document.getElementById('mRadResult').innerHTML = Math.pow(x6 * y3, inverse2);
+            }
+            function divRad() {
+                var x7 = document.getElementById('x7').value;
+                var y4 = document.getElementById('y4').value;
+                var n4 = document.getElementById('n4').value;
+                var inverse3 = 1 / n4;
+
+                document.getElementById('dRadResult').innerHTML = Math.pow(x7 / y4, inverse3);
+            }
+        </script>
+
+<div class="grid-item">
+
+        <b>Quadratic Formula</b><br>
+
+        <b>x = (-b +/- &radic;<span style="text-decoration: overline">b<sup>2</sup> - 4ac</span>) / 2a</b><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a1"><br><br>
+        Enter the value of <b>b</b>:
+        <input type="number" value="" id="b1"><br><br>
+        Enter the value of <b>c</b>:
+        <input type="number" value="" id="c1"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return quad()">
+        <b>x<sub>1</sub> = </b>
+        <b><span id="quadResult1"></span></b>
+        <b>x<sub>2</sub> = </b>
+        <b><span id="quadResult2"></span></b><br><br>
+</div>
+
+<div class="grid-item">
+
+        <b>Difference of 2 Squares</b><br>
+
+        <b>(a - b)(a + b) = a<sup>2</sup> - b<sup>2</sup></b><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a2"><br><br>
+        Enter the value of <b>b</b>:
+        <input type="number" value="" id="b2"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return diff2Sq()">
+        <b>ANS = </b>
+        <b><span id="diffResult"></span></b><br><br>
+</div>
+
+<div class="grid-item">
+
+        <b>Perfect Square Trinomial</b><br>
+
+        <b>(a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup></b><br>
+        Enter the value of <b>a</b>:
+        <input type="number" value="" id="a3"><br><br>
+        Enter the value of <b>b</b>:
+        <input type="number" value="" id="b3"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return perfSqTri()">
+        <b>ANS = </b>
+        <b><span id="pstResult"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+
+        <b>Product of Exponents</b><br><br>
+
+        <b>x<sup>m</sup> * x<sup>n</sup> = x<sup>m+n</sup></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x1"><br><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m1"><br><br>
+        Enter the value of <b>n</b>:
+        <input type="number" value="" id="n1"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return productExp()">
+        <b>ANS = </b>
+        <b><span id="pExpResult1"></span></b><br><br>
+
+        <b>x<sup>m</sup> * y<sup>m</sup> = (x * y)<sup>m</sup></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x2"><br><br>
+        Enter the value of <b>y</b>:
+        <input type="number" value="" id="y1"><br><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m2"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return productExp2()">
+        <b>ANS = </b>
+        <b><span id="pExpResult2"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+
+        <b>Quotient of Exponents</b><br><br>
+
+        <b>x<sup>m</sup> รท x<sup>n</sup> = x<sup>m-n</sup></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x3"><br><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m3"><br><br>
+        Enter the value of <b>n</b>:
+        <input type="number" value="" id="n2"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return quotientExp()">
+        <b>ANS = </b>
+        <b><span id="qExpResult1"></span></b><br><br>
+
+        <b>x<sup>m</sup> รท y<sup>m</sup> = (x รท y)<sup>m</sup></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x4"><br><br>
+        Enter the value of <b>y</b>:
+        <input type="number" value="" id="y2"><br><br>
+        Enter the value of <b>m</b>:
+        <input type="number" value="" id="m4"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return quotientExp2()">
+        <b>ANS = </b>
+        <b><span id="qExpResult2"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+
+        <b>Fractional Exponents</b><br><br>
+
+        <b>x<sup>p/q</sup> = <sup>q</sup>&radic;<span style="text-decoration: overline">x<sup>p</sup></span></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x5"><br><br>
+        Enter the value of <b>p</b>:
+        <input type="number" value="" id="p1"><br><br>
+        Enter the value of <b>q</b>:
+        <input type="number" value="" id="q1"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return fracExp()">
+        <b>ANS = </b>
+        <b><span id="fExpResult"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+
+        <b>Radical Multiplication</b><br><br>
+
+        <b><sup>n</sup>&radic;<span style="text-decoration: overline">x</span> * <sup>n</sup>&radic;<span
+                style="text-decoration: overline">y</span>= <sup>n</sup>&radic;<span style="text-decoration: overline">x
+                * y</span></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x6"><br><br>
+        Enter the value of <b>y</b>:
+        <input type="number" value="" id="y3"><br><br>
+        Enter the value of <b>n</b>:
+        <input type="number" value="" id="n3"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return multRad()">
+        <b>ANS = </b>
+        <b><span id="mRadResult"></span></b><br><br>
+
+</div>
+
+<div class="grid-item">
+
+        <b>Radical Division</b><br><br>
+
+        <b><sup>n</sup>&radic;<span style="text-decoration: overline">x</span> รท <sup>n</sup>&radic;<span
+                style="text-decoration: overline">y</span>= <sup>n</sup>&radic;<span style="text-decoration: overline">x
+                / y</span></b><br>
+        Enter the value of <b>x</b>:
+        <input type="number" value="" id="x7"><br><br>
+        Enter the value of <b>y</b>:
+        <input type="number" value="" id="y4"><br><br>
+        Enter the value of <b>n</b>:
+        <input type="number" value="" id="n4"><br><br>
+        <input type="submit" value="calculate" id="jai" onclick="return divRad()">
+        <b>ANS = </b>
+        <b><span id="dRadResult"></span></b><br><br>
+
+</div>
+
+    </body>
+
+</html>
