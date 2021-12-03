@@ -5,21 +5,35 @@
         <link rel="stylesheet" type="text/css" href="math.css">
     </head>
     <style>
-      .grid-container {
-display: grid;
-grid-template-columns: auto auto auto;
-background-color: #333;
-padding: 10px;
-}
-
-.grid-item {
-background-color: pink;
-border: 1px blue;
-padding: 20px;
-font-size: 30px;
-text-align: center;
-text-decoration: none;
-}
+      
+        .box {
+      height: 300px;
+      width: 50%;
+      background-color: pink;
+      border: solid gray;
+      margin-bottom: 15px;
+      padding: 20pxpx;
+      font-size: 18px;
+      margin-left: auto;
+  margin-right: auto;
+  
+      margin: 2;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+    
+    
+    
+  }
+  
+  .box-item {
+    background-color: pink;
+    border: 3px #333;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
   </style>
     
 
@@ -65,7 +79,7 @@ text-decoration: none;
   
 </script>
 
-<div class="grid-item">
+<div class="box">
          <b>circumference of circle</b><br><br>
          Enter the radius:
          <input type="number" value="" id="number"><br><br>
@@ -75,7 +89,7 @@ text-decoration: none;
 
 </div>
 
-<div class="grid-item">
+<div class="box">
         <b>Perimeter of rectangle</b><br><br>
         Enter the length:
           <input type="number" value="" id="number1"><br><br>
@@ -86,7 +100,7 @@ text-decoration: none;
          <b><span id="result1"></span></b><br><br>
 </div>
 
-<div class="grid-item">
+<div class="box">
          <b>Perimeter of square</b><br><br>
          Enter the side:
           <input type="number" value="" id="number3"><br><br>
@@ -94,7 +108,7 @@ text-decoration: none;
           <b>the result is:</b>
          <b><span id="result2"></span></b><br><br>
 </div>
-<div class="grid-item">
+<div class="box">
          <b>Perimeter of triangle</b><br><br>
          Enter the side1:
          <input type="number" value="" id="number4"><br><br>
